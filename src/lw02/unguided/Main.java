@@ -2,7 +2,7 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(Main.class.getResourceAsStream(""));
+        Scanner input = new Scanner(Main.class.getResourceAsStream("borrowing.txt"));
 
         LinkedList<String[]> transaksi = new LinkedList<>();
         LinkedList<String[]> stok = new LinkedList<>();
@@ -12,9 +12,9 @@ class Main {
         LinkedList<String[]> sukses = new LinkedList<>();
 
         while (input.hasNextLine()) {
-            String baris = input.nextLine();
+            String baris = input.nextLine().trim();
             if (baris.isEmpty()) break;
-            String[] data = baris.split(" ");
+            String[] data = baris.split("\\s+");
             transaksi.add(data);
         }
         input.close();
