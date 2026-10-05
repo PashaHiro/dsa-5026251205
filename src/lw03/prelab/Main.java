@@ -101,7 +101,7 @@ public class Main{
         input.close();
 
         System.out.println("===== Problem 3 =====");
-        for(Map.Entry<String, Integer> barang : inventory.entrySet()){
+        for(Map.Entry<String, Integer> barang : inventory.entrySet()){ // for(String x : inventory.KeySet(produk))
            System.out.println(barang.getKey() + ": " + barang.getValue());
         }
         System.out.println("Failed sales: " + gagal);
